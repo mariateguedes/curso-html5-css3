@@ -1,0 +1,252 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;        
+    color: rgba(0,0,0,)
+}
+
+div#interface { /* Formatação do que está na aba div(corpo do site) */
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto; /* Ordem: cima, direita, baixo e esquerda */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    padding: 10px 10px 10px 10px; /* Margem interna (Se todos os lados forem iguais, pode informar apenas uma vez.  */
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;  /* Para tirar o sublinhado dos links */
+}
+
+a:hover {
+    text-decoration: underline;  /* Para os links ficarem sublinhados quando passar o mouse */
+}
+
+header#cabecalho img#icone {
+    position: absolute; /* A posição é absoluta pois a imagem vai ultrapassar a borda do div */
+    left: 1040px;
+    top: 70px;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /* Tamanho, cor e formato da borda que fica abaixo do cabeçalho */
+    height: 150px; /* Altura interna do cabeçalho */ 
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* Se utiliza .. quando se quer voltar uma pasta anterior, aqui estamos na css */
+}
+
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;  /* Margem interna */
+    margin-top: 0px; /* Margem externa */
+}
+
+/* Formatação de imagens com legendas */ 
+
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Formatação da legenda */
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+/*Aparecer dados da legenda somente quando passar o mouse por cima da imagem*/
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+}
+
+/* Formatação do menu */
+nav#menu {
+    display: block;  /* Para que o meu menu apareça como um bloco (um bloco pode flutuar pela tela) */
+}
+nav#menu ul{
+    list-style: none;  /* Para sumir com as bolinhas antes de cada tópico da lista */
+    text-transform: uppercase;  /* Todas as letras do menu em masiúsculo */  
+    position: absolute; /* Se refere a uma posição absoluta dentro de todo o site, não só do bloco do menu. A posição relativa, ele fica preso dentro do bloco. */
+    top: -20px;
+    left: 575px; 
+}
+
+nav#menu li{  /* Formatação para cada item da lista do menu */
+    display: inline-block; /* Para todos os itens da lista aparecerem na horizontal */
+    background-color: #dddddd;
+    padding: 10px; /* Aumentar o tamanho do background do menu */
+    margin: 2px; /* Distancia entre cada botão do menu */
+    transition: background-color 1s;  /* Tempo para fazer a transição da cor de fundo do menu */
+}
+
+nav#menu li:hover { /* Mudar a cor do botão do menu quando passar o mouse por cima */
+    background-color: #606060; 
+}
+
+nav#menu h1 {
+    display: none;  /* Para esconder o que está dentro do h1 do menu, ou seja, MENU PRINCIPAL. */ 
+}
+
+nav#menu a{  /* Formatar os links do menu */
+    color: black; 
+    text-decoration: none; /* Tirar o sublinhado do link */
+}
+
+nav#menu a:hover { /* Mudar a cor do texto do menu (link) quando passar o mouse */
+    color: white;
+}
+
+section#corpo {
+    display: block; /* Para ser mostrada como um bloco */
+    width: 500px;
+    float: left; /* Para usar o float você também deve estar usando o block */
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direita {
+    text-align: right;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
+}
+
+table#tabelaspec {
+    border: 1px solid #606060;    
+    border-spacing: 0px; /* Espaço entre as células */
+    margin-left: auto; /* Para centralizar a tabela */
+    margin-right: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060; 
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce {  /* Formatação apenas para as células que estão na classe ce(coluna da esquerda) */
+    color: white;
+    background-color: #606060;
+    vertical-align: top;  /* As configurações da classe sobrepõem aquelas definidas na tag principal, nesse caso, td */
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span {
+    display: block; /* Será um bloco flutuante, ou seja, irá se desconectar do resto do texto */
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+aside#lateral h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+video#filme02 {
+    width: 350px;
+    float: center;
+}
+
+footer#rodape {
+    clear: both; /* Limpar a configuração dos dois lados */
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+
+
